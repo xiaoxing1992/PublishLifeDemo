@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <View
+            android:id="@+id/view_title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/left_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignTop="@id/view_title"
+            android:layout_alignBottom="@id/view_title"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_back_black"
+            app:layout_constraintBottom_toBottomOf="@id/view_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view_title" />
+
+        <TextView
+            android:id="@+id/tv_publish"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="12dp"
+            android:gravity="center"
+            android:text="@string/title_publish"
+            android:textColor="#ff000000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/view_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="8dp"
+            android:overScrollMode="never"
+            app:layout_constraintTop_toBottomOf="@id/view_title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
